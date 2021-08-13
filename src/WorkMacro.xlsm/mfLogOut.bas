@@ -7,7 +7,7 @@ Attribute VB_Name = "mfLogOut"
 
 
 
-Sub mfLogOutInitialize()
+Function mfLogOutInitialize()
     
     ' Set wsLog = wb.Worksheets.Add(after:=Sheets(wb.Worksheets.Count))
     
@@ -27,10 +27,9 @@ Sub mfLogOutInitialize()
     
     Set tso = FSO.CreateTextFile(ActiveWorkbook.Path & "\" & LogFileName & ".txt")
     
-    tso.Write "hogehoge"
+    tso.Write "hogehoge" & vbCrLf
+    tso.Write Now & vbCrLf
     
     
-    
-End Sub
-
+End Function
 

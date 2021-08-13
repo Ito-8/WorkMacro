@@ -4,7 +4,7 @@ Sub startmacro_Click()
     Dim wb As Workbook
     Set wb = Application.ActiveWorkbook
     
-    If mfLogOutInitialize(wb) Then
+    If mfLogOutInitialize() Then
         GoTo Err:
     End If
     

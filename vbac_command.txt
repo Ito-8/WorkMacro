@@ -1,0 +1,12 @@
+[sh]
+cscript vbac.wsf decombine
+[/sh]
+
+[sh]
+cscript vbac.wsf combine
+[/sh]
+
+
+参考サイト：
+https://tonari-it.com/vba-vbac-git/
+
