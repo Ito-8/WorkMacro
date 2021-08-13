@@ -1,19 +1,19 @@
-#QlƒTƒCƒgFhttps://qiita.com/inabe49/items/16ee3d9d1ce68daa9fff
+#å‚è€ƒã‚µã‚¤ãƒˆï¼šhttps://qiita.com/inabe49/items/16ee3d9d1ce68daa9fff
 
 
-# "#" ‚Ån‚Ü‚és‚ÍƒRƒƒ“ƒg
+# "#" ã§å§‹ã¾ã‚‹è¡Œã¯ã‚³ãƒ¡ãƒ³ãƒˆ
 
-# exe ƒtƒ@ƒCƒ‹‚Í—v‚ç‚È‚¢
+# exe ãƒ•ã‚¡ã‚¤ãƒ«ã¯è¦ã‚‰ãªã„
 #*.exe
 
-# bin ƒtƒHƒ‹ƒ_‚Í—v‚ç‚È‚¢
+# bin ãƒ•ã‚©ãƒ«ãƒ€ã¯è¦ã‚‰ãªã„
 #bin/
 
-# nuget.exe ‚Í•K—p‚Èƒtƒ@ƒCƒ‹
+# nuget.exe ã¯å¿…ç”¨ãªãƒ•ã‚¡ã‚¤ãƒ«
 #!/.nuget/nuget.exe
 
-# ƒpƒbƒP[ƒWƒtƒHƒ‹ƒ_“à‚Ì .ts ƒtƒ@ƒCƒ‹‚Í—v‚ç‚È‚¢
+# ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ãƒ•ã‚©ãƒ«ãƒ€å†…ã® .ts ãƒ•ã‚¡ã‚¤ãƒ«ã¯è¦ã‚‰ãªã„
 #package/**/*.ts
 
 
-Log_*.txt
+Log_*.csv
