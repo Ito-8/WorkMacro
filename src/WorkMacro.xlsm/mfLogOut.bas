@@ -2,22 +2,25 @@ Attribute VB_Name = "mfLogOut"
 'éQè∆ê›íË : Microsoft scripting runtime
 'éQè∆ê›íËÇÃé©ìÆê›íËÅFhttp://kouten0430.hatenablog.com/entry/2017/10/21/152301
 
+Option Explicit
+
 Dim FSO As FileSystemObject
-Dim LogFileName As String
+Dim LogFilePath As String
 
 
 Sub mfLogOutInitialize()
     
-    LogFileName = "Log_" & Now
-    LogFileName = Replace(LogFileName, "/", "")
-    LogFileName = Replace(LogFileName, " ", "")
-    LogFileName = Replace(LogFileName, ":", "")
-    LogFileName = LogFileName & ".csv"
+    LogFilePath = "Log_" & Now
+    LogFilePath = Replace(LogFilePath, "/", "")
+    LogFilePath = Replace(LogFilePath, " ", "")
+    LogFilePath = Replace(LogFilePath, ":", "")
+    LogFilePath = LogFilePath & ".csv"
+    LogFilePath = ActiveWorkbook.Path & "\Log\" & LogFilePath
 
     Set FSO = New FileSystemObject
     
     Dim tso As TextStream
-    Set tso = FSO.CreateTextFile(ActiveWorkbook.Path & "\" & LogFileName)
+    Set tso = FSO.CreateTextFile(LogFilePath)
 
     tso.Close
     
@@ -31,7 +34,7 @@ Sub mfWriteLog(msg As String)
     msg = Now & "," & msg & vbCrLf
 
     Dim tso As TextStream
-    Set tso = FSO.OpenTextFile(ActiveWorkbook.Path & "\" & LogFileName, ForAppending)
+    Set tso = FSO.OpenTextFile(LogFilePath, ForAppending)
     
     tso.Write msg
     

@@ -1,6 +1,5 @@
 #参考サイト：https://qiita.com/inabe49/items/16ee3d9d1ce68daa9fff
 
-
 # "#" で始まる行はコメント
 
 # exe ファイルは要らない
@@ -15,5 +14,5 @@
 # パッケージフォルダ内の .ts ファイルは要らない
 #package/**/*.ts
 
-
-Log_*.csv
+*
+!.gitignore
