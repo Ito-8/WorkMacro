@@ -4,15 +4,11 @@ Sub startmacro_Click()
     Dim wb As Workbook
     Set wb = Application.ActiveWorkbook
     
-    If mfLogOutInitialize() Then
-        GoTo Err:
-    End If
+    mfLogOutInitialize
     
     MsgBox "Finish"
     Exit Sub
     
-Err:
-    MsgBox "error"
 
 
 End Sub

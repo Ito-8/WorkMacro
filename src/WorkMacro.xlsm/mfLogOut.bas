@@ -7,7 +7,7 @@ Attribute VB_Name = "mfLogOut"
 
 
 
-Function mfLogOutInitialize()
+Sub mfLogOutInitialize()
     
     ' Set wsLog = wb.Worksheets.Add(after:=Sheets(wb.Worksheets.Count))
     
@@ -31,5 +31,5 @@ Function mfLogOutInitialize()
     tso.Write Now & vbCrLf
     
     
-End Function
+End Sub
 
