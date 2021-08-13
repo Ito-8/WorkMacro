@@ -2,34 +2,39 @@ Attribute VB_Name = "mfLogOut"
 '参照設定 : Microsoft scripting runtime
 '参照設定の自動設定：http://kouten0430.hatenablog.com/entry/2017/10/21/152301
 
-
-'Dim wsLog As Worksheet
-
+Dim FSO As FileSystemObject
+Dim LogFileName As String
 
 
 Sub mfLogOutInitialize()
-    
-    ' Set wsLog = wb.Worksheets.Add(after:=Sheets(wb.Worksheets.Count))
-    
-    Dim LogFileName As String
     
     LogFileName = "Log_" & Now
     LogFileName = Replace(LogFileName, "/", "")
     LogFileName = Replace(LogFileName, " ", "")
     LogFileName = Replace(LogFileName, ":", "")
-    
-    ' wsLog.Name = LogSheetName
-    
-    Dim FSO As FileSystemObject
+    LogFileName = LogFileName & ".csv"
+
     Set FSO = New FileSystemObject
     
     Dim tso As TextStream
+    Set tso = FSO.CreateTextFile(ActiveWorkbook.Path & "\" & LogFileName)
+
+    tso.Close
     
-    Set tso = FSO.CreateTextFile(ActiveWorkbook.Path & "\" & LogFileName & ".txt")
-    
-    tso.Write "hogehoge" & vbCrLf
-    tso.Write Now & vbCrLf
-    
+    mfWriteLog ("マクロ起動")
     
 End Sub
 
+
+Sub mfWriteLog(msg As String)
+    
+    msg = Now & "," & msg & vbCrLf
+
+    Dim tso As TextStream
+    Set tso = FSO.OpenTextFile(ActiveWorkbook.Path & "\" & LogFileName, ForAppending)
+    
+    tso.Write msg
+    
+    tso.Close
+
+End Sub

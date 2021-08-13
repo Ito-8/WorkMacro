@@ -5,6 +5,9 @@ Sub startmacro_Click()
     Set wb = Application.ActiveWorkbook
     
     mfLogOutInitialize
+    mfWriteLog ("hogehoge1")
+    mfWriteLog ("hogehoge2")
+    mfWriteLog ("hogehoge3")
     
     MsgBox "Finish"
     Exit Sub
