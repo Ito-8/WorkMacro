@@ -4,7 +4,6 @@ Attribute VB_Name = "mfLogOut"
 
 Option Explicit
 
-Dim FSO As FileSystemObject
 Dim LogFilePath As String
 
 
@@ -17,6 +16,7 @@ Sub mfLogOutInitialize()
     LogFilePath = LogFilePath & ".csv"
     LogFilePath = ActiveWorkbook.Path & "\Log\" & LogFilePath
 
+    Dim FSO As FileSystemObject
     Set FSO = New FileSystemObject
     
     Dim tso As TextStream
@@ -32,7 +32,9 @@ End Sub
 Sub mfWriteLog(msg As String)
     
     msg = Now & "," & msg & vbCrLf
-
+    
+    Dim FSO As FileSystemObject
+    Set FSO = New FileSystemObject
     Dim tso As TextStream
     Set tso = FSO.OpenTextFile(LogFilePath, ForAppending)
     
