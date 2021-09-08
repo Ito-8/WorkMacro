@@ -27,3 +27,20 @@ Sub mfKoushinNitiji(filePath As String, Nitiji As String)
 End Sub
 
 
+Function mfReplace(replaceTarget As String) As String
+
+    Dim wsReplaceMaster As Worksheet
+    
+    Set wsReplaceMaster = ActiveWorkbook.Worksheets("ReplaceMaster")
+    
+    Dim i As Integer
+    i = 2
+    
+    Do While wsReplaceMaster.Cells(i, 1).Value <> ""
+        replaceTarget = Replace(replaceTarget, wsReplaceMaster.Cells(i, 1), wsReplaceMaster.Cells(i, 2).Value)
+        i = i + 1
+    Loop
+    
+    mfReplace = replaceTarget
+    
+End Function
