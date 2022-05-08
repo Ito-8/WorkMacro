@@ -1,3 +1,5 @@
+git bash ‚Å‚Ìì‹Æ
+
 Eì‹Æ‚ğŠJn‚·‚é‚Æ‚« (Git Clone)
 git clone https://github.com/Ito-8/WorkMacro.git
 
