@@ -4,4 +4,4 @@ git bash での作業
 git clone https://github.com/Ito-8/WorkMacro.git
 
 ・更新をアップロードするとき
-./jido_commit (コメント)
+./jido_commit.sh (コメント)
